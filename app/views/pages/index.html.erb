@@ -1,0 +1,15 @@
+<h1>Search for a Flickr User's photos with their ID</h1>
+<p>A User's ID can be found using <a href="https://www.webfx.com/tools/idgettr/">idGettr</a></p>
+
+<%= form_with(url: "/search", method: "GET", local: true) do |f| %>
+  <%= f.label "Search Flickr ID"%>
+  <%= f.text_field "flickr_id" %>
+  <%= f.submit("Go")%>
+<% end %>
+
+
+<% if @photo_hash %>
+  <% @photo_hash.each do |i| %>
+   <%= image_tag("https://farm#{i["farm"]}.staticflickr.com/#{i["server"]}/#{i["id"]}_#{i["secret"]}.jpg") %>
+  <% end %>
+<% end %>
