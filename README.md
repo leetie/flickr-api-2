@@ -1,24 +1,13 @@
-# README
+This Project is part of [The Odin Project's](https://www.theodinproject.org) Rails course. I worked with the Flickr API to build a very simple application using the rest-client gem to make requests for photos via a form. When I retrieved a response from the Flickr API, I then sent a hash to the view that contained every photo and rendered an image tag for each. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Setup
 
-Things you may want to cover:
+```shell
 
-* Ruby version
+        touch .env && echo "FLICKR_API_KEY='your_key_here'" >> .env && echo "FLICKR_API_SECRET='your_secret_here'" >> .env 
 
-* System dependencies
+        echo "/.env" >> .gitignore 
 
-* Configuration
+```
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
